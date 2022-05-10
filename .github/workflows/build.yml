@@ -1,8 +1,8 @@
 name: Build on Tag
 
 on:
-  push:
-    tags: '*'
+ watch:
+    types: [started]
 
 jobs:
   build:
