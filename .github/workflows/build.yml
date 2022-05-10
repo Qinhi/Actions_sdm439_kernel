@@ -16,11 +16,13 @@ jobs:
       with:
         repository: lemniskett/AnyKernel3
         path: zipper
-
-    - name: Android kernel build
-       run: |
+    
+    - name: text
+      run: |
           git clone --recursive https://github.com/MiCode/Xiaomi_Kernel_OpenSource.git -b olive-q-oss  --depth 1
           cd Xiaomi_Kernel_OpenSource
+    
+    - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
       env:
